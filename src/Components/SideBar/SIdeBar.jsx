@@ -1,11 +1,10 @@
 import './SideBar.css'
+import Collection from '../Collection/Collection'
 
-const SideBar = (props) => {
+const SideBar = ({collections, setCollections}) => {
     return(
         <div className="sidebar">
-            <div></div>
-            <div></div>
-            <div></div>
+            <Collection collections={collections}/>
         </div>
     )
 }

@@ -1,16 +1,14 @@
 import React, { useState, useEffect } from "react";
 import axios from 'axios';
 import NavBar from "./Components/NavBar/NavBar";
-import SideBar from "./Components/SideBar/SIdeBar";
-import CollectionContainer from "./Components/CollectionContainer/CollectionContainer";
+import Main from "./Components/Main/Main";
 
 function App() {
 
   return (
     <div className="App">
       < NavBar />
-      <SideBar />
-      <CollectionContainer />
+      <Main />
     </div>
   );
 }
