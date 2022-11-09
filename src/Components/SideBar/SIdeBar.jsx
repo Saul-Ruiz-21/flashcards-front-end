@@ -1,10 +1,10 @@
 import './SideBar.css'
-import Collection from '../Collection/Collection'
+import CollectionContainer from '../CollectionContainer/CollectionContainer'
 
-const SideBar = ({collections, setCollections}) => {
+const SideBar = () => {
     return(
         <div className="sidebar">
-            <Collection collections={collections}/>
+            <CollectionContainer />
         </div>
     )
 }

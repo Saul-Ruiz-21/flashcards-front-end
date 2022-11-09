@@ -1,11 +1,18 @@
 import React, {useState} from "react"
+import './Collection.css'
 
 
-const Collection = ({collections}) => {
+const Collection = ({collection, setCollection, selectedcollection}) => {
+
+    const handleClick = () => {
+        setCollection(collection)
+        console.log(collection)
+    }
+    
+
     return(
-        <div>
-            {collections.map(collection => 
-                <h3>{collection.title}</h3>)}
+        <div className="collections" onClick={() => handleClick()} >
+            <h2>{collection.title}</h2>
         </div>
     )
 }
