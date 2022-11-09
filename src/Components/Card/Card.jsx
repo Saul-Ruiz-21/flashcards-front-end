@@ -4,10 +4,12 @@ import './Card.css'
 
 const Card = ({fluttercard}) => {
 
-
+    function cards(){
+        let flutter = fluttercard.filter()
+    }
 
     return(
-        <div className="card">
+        <div className="fluttercard">
             {fluttercard.word}
         </div>
     )

@@ -35,9 +35,17 @@ const CardContainer = (props) => {
 
     return(
         <div>
-            {fluttercards.map(fluttercard => 
-                <Card key={fluttercard.id} fluttercard={fluttercard}/>)}
+            <div>
+                {fluttercards.map(fluttercard => 
+                    <Card key={fluttercard.id} fluttercard={fluttercard}/>)}
+            </div>
+
+            <div>
+                
+            </div>
+            
         </div>
+        
     )
 
 }
