@@ -1,6 +1,16 @@
+import React, { useState } from "react"
+import './Card.css'
+
+
+const Card = ({fluttercard}) => {
 
 
 
-const Card = (props) => {
-    
+    return(
+        <div className="card">
+            {fluttercard.word}
+        </div>
+    )
 }
+
+export default Card

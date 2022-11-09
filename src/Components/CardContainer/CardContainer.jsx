@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import axios from 'axios';
+import Card from "../Card/Card";
 
 
 const CardContainer = (props) => {
@@ -24,6 +25,21 @@ const CardContainer = (props) => {
         console.log(response)
         setPandasCards(response.data)
     }
+
+
+    useEffect(() => {
+        getAllFlutterCards();
+        getAllCssCards();
+        getAllPandasCards();
+    }, [])
+
+    return(
+        <div>
+            {fluttercards.map(fluttercard => 
+                <Card key={fluttercard.id} fluttercard={fluttercard}/>)}
+        </div>
+    )
+
 }
 
 export default CardContainer

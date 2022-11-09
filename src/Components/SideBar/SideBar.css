@@ -1,6 +1,5 @@
 .sidebar {
     box-sizing: border-box;
-    background-color: aqua;
     flex: auto;
     height: 100vh;
     width: 150px;
