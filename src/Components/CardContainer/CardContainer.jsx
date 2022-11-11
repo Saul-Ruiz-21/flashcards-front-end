@@ -3,47 +3,28 @@ import axios from 'axios';
 import Card from "../Card/Card";
 
 
-const CardContainer = (props) => {
-    const [fluttercards, setFlutterCards] = useState([])
-    const [csscards, setCssCards] = useState([])
-    const [pandascards, setPandasCards] = useState([])
+const CardContainer = ({selectedcollection, setSelectedCollection}) => {
+    const [activecard, setActiveCard] = useState([])
+
     
-    async function getAllFlutterCards(){
-        let response = await axios.get('http://127.0.0.1:8000/api/collections/1/cards/')
+    async function getCards(){
+        let response = await axios.get(`http://127.0.0.1:8000/api/collections/${selectedcollection}/cards/`)
         console.log(response)
-        setFlutterCards(response.data)
-    }
-
-    async function getAllCssCards(){
-        let response = await axios.get('http://127.0.0.1:8000/api/collections/2/cards/')
-        console.log(response)
-        setCssCards(response.data)
-    }
-
-    async function getAllPandasCards(){
-        let response = await axios.get('http://127.0.0.1:8000/api/collections/3/cards/')
-        console.log(response)
-        setPandasCards(response.data)
+        setActiveCard(response.data)
     }
 
 
     useEffect(() => {
-        getAllFlutterCards();
-        getAllCssCards();
-        getAllPandasCards();
-    }, [])
+        getCards();
+    }, [selectedcollection])
 
     return(
         <div>
             <div>
-                {fluttercards.map(fluttercard => 
-                    <Card key={fluttercard.id} fluttercard={fluttercard} setFlutterCard={setFlutterCards}/>)}
+                {activecard.map(cards => 
+                    <Card key={cards.id} cards={cards} setActiveCard={setActiveCard}/>)}
             </div>
 
-            <div>
-                
-            </div>
-            
         </div>
         
     )

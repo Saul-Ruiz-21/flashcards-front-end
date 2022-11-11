@@ -2,9 +2,9 @@ import Collection from "../Collection/Collection"
 import React, { useState, useEffect } from "react";
 import axios from 'axios';
 
-const CollectionContainer = (props) => {
+const CollectionContainer = ({selectedcollection, setSelectedCollection}) => {
     const [collections, setCollections] = useState([])
-    const [selectedcollection, setSelectedCollection] = useState({})
+   
 
     async function getAllCollections(){
         let response = await axios.get('http://127.0.0.1:8000/api/collections/')

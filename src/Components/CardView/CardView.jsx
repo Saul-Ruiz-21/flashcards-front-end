@@ -1,9 +1,12 @@
-
+import React, { useState } from "react"
 
 
 const CardView = (props) => {
+
+
+
     return(
-        <div className="card-face-front">
+        <div>
             
         </div>
     )

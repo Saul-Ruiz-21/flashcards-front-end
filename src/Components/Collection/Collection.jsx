@@ -5,10 +5,10 @@ import './Collection.css'
 const Collection = ({collection, setCollection, selectedcollection}) => {
 
     const handleClick = () => {
-        setCollection(collection)
+        setCollection(collection.id)
         console.log(collection)
     }
-    
+
 
     return(
         <div className="collections" onClick={() => handleClick()} >

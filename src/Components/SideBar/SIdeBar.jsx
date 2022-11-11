@@ -1,10 +1,10 @@
 import './SideBar.css'
 import CollectionContainer from '../CollectionContainer/CollectionContainer'
 
-const SideBar = () => {
+const SideBar = ({selectedcollection, setSelectedCollection}) => {
     return(
         <div className="sidebar">
-            <CollectionContainer />
+            <CollectionContainer  selectedcollection={selectedcollection} setSelectedCollection={setSelectedCollection}/>
         </div>
     )
 }
