@@ -1,24 +1,19 @@
-import React, { useState } from "react"
+import './CardView.css'
 
 
-const CardView = ({selectedcard, setSelectedCard, activecard}) => {
+const CardView = ({cardobj, index, setIndex}) => {
 
-    const handleClick = () => {
-        setSelectedCard(activecard.id)
+    const next = () => {
+        if(index === cardobj.length){
+            setIndex(index + 1)
+        }
     }
 
-    return(
-        <div>
-            <div>
-                <button >NEXT</button>
-            </div>
-            
-            <div>
-                <button>PREV</button>
-            </div>
+    return (
+        <div className="Button" onClick={next}>
+            <button>NEXT</button>
         </div>
     )
-
 }
 
 export default CardView
