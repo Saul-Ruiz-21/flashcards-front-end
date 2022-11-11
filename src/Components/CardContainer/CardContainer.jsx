@@ -1,9 +1,10 @@
 import React, { useState, useEffect } from "react";
 import axios from 'axios';
 import Card from "../Card/Card";
+import CardView from "../CardView/CardView";
 
 
-const CardContainer = ({selectedcollection, setSelectedCollection}) => {
+const CardContainer = ({selectedcollection, selectedcard, setSelectedCard}) => {
     const [activecard, setActiveCard] = useState([])
 
     
@@ -23,6 +24,10 @@ const CardContainer = ({selectedcollection, setSelectedCollection}) => {
             <div>
                 {activecard.map(cards => 
                     <Card key={cards.id} cards={cards} setActiveCard={setActiveCard}/>)}
+            </div>
+
+            <div>
+                <CardView activecard={activecard} selectedcard={selectedcard} setSelectedCard={setSelectedCard}/>
             </div>
 
         </div>
