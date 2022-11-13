@@ -12,11 +12,23 @@ const CardView = ({cardobj, index, setIndex}) => {
     }
    }
 
+   const prev =() => {
+    if(index != 0){
+        setIndex(index - 1)
+    }
+    else{
+        setIndex(cardobj.length - 1)
+    }
+   }
+
     return (
         <div>
             <div>{cardobj[index]}</div>
             <button className='Next_Button' onClick={() => next()}>
                 NEXT
+            </button>
+            <button className='Prev_Button' onClick={() => prev()}>
+                PREV
             </button>
         </div>
     )
