@@ -7,6 +7,7 @@ import CardView from "../CardView/CardView";
 const CardContainer = ({selectedcollection, selectedcard, setSelectedCard}) => {
     const [cards, setCards] = useState([])
     const [index, setIndex] = useState(0)
+    const [cardnumber, setCardNumber] = useState(1)
 
     
     async function getCards(){
@@ -27,7 +28,7 @@ const CardContainer = ({selectedcollection, selectedcard, setSelectedCard}) => {
 
     return(
         <div>
-            <CardView cardobj={cardobj} index={index} setIndex={setIndex}/>
+            <CardView cardobj={cardobj} index={index} setIndex={setIndex} cardnumber={cardnumber} setCardNumber={setCardNumber}/>
         </div>
         
     )

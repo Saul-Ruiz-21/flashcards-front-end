@@ -1,23 +1,27 @@
 import './CardView.css'
 
 
-const CardView = ({cardobj, index, setIndex}) => {
+const CardView = ({cardobj, index, setIndex, cardnumber, setCardNumber}) => {
 
    const next = () => {
     if(index != cardobj.length -1){
         setIndex(index + 1)
+        setCardNumber(index + 2)
     }
     else{
         setIndex(0)
+        setCardNumber(1)
     }
    }
 
    const prev =() => {
     if(index != 0){
         setIndex(index - 1)
+        setCardNumber(cardnumber - 1)
     }
     else{
         setIndex(cardobj.length - 1)
+        setCardNumber(cardobj.length)
     }
    }
 
@@ -30,6 +34,9 @@ const CardView = ({cardobj, index, setIndex}) => {
             <button className='Prev_Button' onClick={() => prev()}>
                 PREV
             </button>
+            <div className='card_number'>
+                {cardnumber}
+            </div>
         </div>
     )
 }
