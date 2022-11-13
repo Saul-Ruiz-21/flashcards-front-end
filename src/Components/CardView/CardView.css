@@ -1,4 +1,5 @@
-.Button {
+.Next_Button {
     position: absolute;
-    align-content: center;
+    right: 60%;
+    bottom: 45%;
 }

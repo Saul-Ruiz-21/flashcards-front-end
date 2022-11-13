@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import axios from 'axios';
 import Card from "../Card/Card";
+import CardView from "../CardView/CardView";
 
 
 const CardContainer = ({selectedcollection, selectedcard, setSelectedCard}) => {
@@ -20,12 +21,13 @@ const CardContainer = ({selectedcollection, selectedcard, setSelectedCard}) => {
     }, [selectedcollection])
 
 
-
+    const cardobj = cards.map(card => 
+        <Card card={card}/>)
 
 
     return(
         <div>
-            <Card cardobj={cards[index]} index={index} setIndex={setIndex}/>
+            <CardView cardobj={cardobj} index={index} setIndex={setIndex}/>
         </div>
         
     )

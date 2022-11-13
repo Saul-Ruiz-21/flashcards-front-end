@@ -3,15 +3,21 @@ import './CardView.css'
 
 const CardView = ({cardobj, index, setIndex}) => {
 
-    const next = () => {
-        if(index === cardobj.length){
-            setIndex(index + 1)
-        }
+   const next = () => {
+    if(index != cardobj.length -1){
+        setIndex(index + 1)
     }
+    else{
+        setIndex(0)
+    }
+   }
 
     return (
-        <div className="Button" onClick={next}>
-            <button>NEXT</button>
+        <div>
+            <div>{cardobj[index]}</div>
+            <button className='Next_Button' onClick={() => next()}>
+                NEXT
+            </button>
         </div>
     )
 }
