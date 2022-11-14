@@ -10,7 +10,7 @@ const CardView = ({cardobj, selectedcollection, cards, selectedCard}) => {
     const [cardnumber, setCardNumber] = useState(1)
     const [addcardmodal, setAddCardModal] = useState(false)
     const [updatecardmodal, setupdateCardModal] = useState(false)
-    const [id, setId] = useState(0)
+    const [id, setId] = useState()
 
    const next = () => {
     if(index !== cardobj.length -1){
