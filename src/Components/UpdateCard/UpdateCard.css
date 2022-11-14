@@ -20,7 +20,7 @@
     color: aqua;
 }
 
-.adding_card {
+.updating_card {
     position: absolute;
     top: 10%;
     right: 28%;
@@ -51,4 +51,10 @@
 
 .submit:hover {
     color: blue;
+}
+
+.id {
+    position: absolute;
+    right: 30%;
+    bottom: 10%;
 }

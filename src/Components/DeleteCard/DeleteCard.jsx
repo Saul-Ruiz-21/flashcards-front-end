@@ -1,9 +1,9 @@
-import React, { useState, useEffect } from "react"
+import React, { useState } from "react"
 import axios from 'axios'
 import './DeleteCard.css'
 
 
-const DeleteCard = ({selectedcollection, cards, cardobj,}) => {
+const DeleteCard = ({selectedcollection, cards,}) => {
     const [id, setId] = useState()
 
 

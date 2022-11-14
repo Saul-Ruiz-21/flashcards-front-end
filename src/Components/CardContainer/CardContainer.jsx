@@ -2,10 +2,9 @@ import React, { useState, useEffect } from "react";
 import axios from 'axios';
 import Card from "../Card/Card";
 import CardView from "../CardView/CardView";
-import AddCard from "../AddCard/AddCard";
 
 
-const CardContainer = ({selectedcollection, selectedcard, setSelectedCard}) => {
+const CardContainer = ({selectedcollection, }) => {
     const [cards, setCards] = useState([])
 
 
