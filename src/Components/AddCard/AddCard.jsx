@@ -38,13 +38,13 @@ const AddCard = ({selectedcollection, cards, open, onClose}) => {
                 </div>
 
                 <div>
-                    <label>Word <input type='text' value={word} onChange={(event) => setWord(event.target.value)} /> </label>
+                    <label className="word">Word <input type='text' value={word} onChange={(event) => setWord(event.target.value)} /> </label>
                 </div>
 
                 <div>
-                    <label> Definition <input type='text' value={definition} onChange={(event) => setDefinition(event.target.value)} /></label>
+                    <label className="definition"> Definition <input type='text' value={definition} onChange={(event) => setDefinition(event.target.value)} /></label>
                 </div>
-                <button type="submit">Submit</button>
+                <button className="submit" type="submit">SAVE</button>
             </div>
         </form>
     )
