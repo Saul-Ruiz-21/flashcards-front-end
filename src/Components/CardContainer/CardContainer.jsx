@@ -2,12 +2,12 @@ import React, { useState, useEffect } from "react";
 import axios from 'axios';
 import Card from "../Card/Card";
 import CardView from "../CardView/CardView";
+import AddCard from "../AddCard/AddCard";
 
 
 const CardContainer = ({selectedcollection, selectedcard, setSelectedCard}) => {
     const [cards, setCards] = useState([])
-    const [index, setIndex] = useState(0)
-    const [cardnumber, setCardNumber] = useState(1)
+
 
     
     async function getCards(){
@@ -28,7 +28,7 @@ const CardContainer = ({selectedcollection, selectedcard, setSelectedCard}) => {
 
     return(
         <div>
-            <CardView cardobj={cardobj} index={index} setIndex={setIndex} cardnumber={cardnumber} setCardNumber={setCardNumber}/>
+            <CardView cards={cards} cardobj={cardobj} selectedcollection={selectedcollection} />
         </div>
         
     )

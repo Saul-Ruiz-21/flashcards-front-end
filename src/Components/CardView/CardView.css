@@ -16,3 +16,8 @@
     bottom: 63%;
     font-size: x-large;
 }
+
+.add_new_card {
+    position: absolute;
+    left: 50%;
+}
