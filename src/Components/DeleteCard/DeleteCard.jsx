@@ -3,7 +3,7 @@ import axios from 'axios'
 import './DeleteCard.css'
 
 
-const DeleteCard = ({selectedcollection, cards,}) => {
+const DeleteCard = ({selectedcollection, cards}) => {
     const [id, setId] = useState()
 
 

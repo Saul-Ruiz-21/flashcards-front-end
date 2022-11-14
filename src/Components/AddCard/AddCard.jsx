@@ -29,7 +29,7 @@ const AddCard = ({selectedcollection, cards, open, onClose}) => {
         <form onSubmit={handleSubmit}>
             <div className="Container">
                 <p className="Close" onClick={onClose}>Close</p>
-                <div className="adding_Card">
+                <div className="adding_card">
                     ADDING CARD . . .
                 </div>
 
