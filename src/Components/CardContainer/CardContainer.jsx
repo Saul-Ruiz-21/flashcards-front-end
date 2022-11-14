@@ -23,7 +23,7 @@ const CardContainer = ({selectedcollection, selectedcard, setSelectedCard}) => {
 
 
     const cardobj = cards.map(card => 
-        <Card card={card}/>)
+        <Card key={card.id} card={card}/>)
 
 
     return(

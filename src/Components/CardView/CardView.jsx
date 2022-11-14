@@ -1,6 +1,7 @@
 import './CardView.css'
 import React, { useState, useEffect } from "react";
 import AddCard from '../AddCard/AddCard';
+import DeleteCard from '../DeleteCard/DeleteCard';
 
 const CardView = ({cardobj, selectedcollection, cards}) => {
     const [index, setIndex] = useState(0)
@@ -11,6 +12,7 @@ const CardView = ({cardobj, selectedcollection, cards}) => {
     if(index !== cardobj.length -1){
         setIndex(index + 1)
         setCardNumber(index + 2)
+        console.log(cardobj.card)
     }
     else{
         setIndex(0)
@@ -47,6 +49,10 @@ const CardView = ({cardobj, selectedcollection, cards}) => {
             <div >
                 <button onClick={() => setModal(true)} className='add_new_card'>ADD CARD</button>
                 <AddCard onClose={()=> setModal(false)} open={modal} selectedcollection={selectedcollection} cards={cards} />
+            </div>
+
+            <div>
+                <DeleteCard selectedcollection={selectedcollection} cardobj={cardobj} cards={cards} index={index}/>
             </div>
         </div>
     )

@@ -18,10 +18,6 @@ const AddCard = ({selectedcollection, cards, open, onClose}) => {
         }
     }
 
-    useEffect(() => {
-        createCard();
-    }, [selectedcollection])
-
     const handleSubmit = (event) => {
         event.preventDefault();
         createCard('')
