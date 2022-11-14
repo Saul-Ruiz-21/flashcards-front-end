@@ -3,9 +3,7 @@ import axios from 'axios'
 import './DeleteCard.css'
 
 
-const DeleteCard = ({selectedcollection, cards}) => {
-    const [id, setId] = useState()
-
+const DeleteCard = ({selectedcollection, cards, id, setId}) => {
 
     async function deleteCard(){
         let response = await axios.delete(`http://127.0.0.1:8000/api/collections/${selectedcollection}/cards/${id}/`);

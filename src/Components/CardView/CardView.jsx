@@ -10,6 +10,7 @@ const CardView = ({cardobj, selectedcollection, cards, selectedCard}) => {
     const [cardnumber, setCardNumber] = useState(1)
     const [addcardmodal, setAddCardModal] = useState(false)
     const [updatecardmodal, setupdateCardModal] = useState(false)
+    const [id, setId] = useState(0)
 
    const next = () => {
     if(index !== cardobj.length -1){
@@ -54,12 +55,12 @@ const CardView = ({cardobj, selectedcollection, cards, selectedCard}) => {
             </div>
 
             <div>
-                <DeleteCard selectedcollection={selectedcollection} cardobj={cardobj} cards={cards} index={index}/>
+                <DeleteCard id={id} setId={setId} selectedcollection={selectedcollection} cardobj={cardobj} cards={cards} index={index}/>
             </div>
 
             <div>
                 <button onClick={() => setupdateCardModal(true)} className='updateCard'>UpdateCard</button>
-                <UpdateCard onClose={()=> setupdateCardModal(false)} open={updatecardmodal} cards={cards} selectedcollection={selectedcollection} />
+                <UpdateCard id={id} setId={setId} onClose={()=> setupdateCardModal(false)} open={updatecardmodal} cards={cards} selectedcollection={selectedcollection} />
             </div>
         </div>
     )

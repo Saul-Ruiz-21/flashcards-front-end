@@ -3,8 +3,7 @@ import React, { useState } from "react"
 import './UpdateCard.css'
 
 
-const UpdateCard = ({selectedcollection, open,onClose, cards}) => {
-    const [id, setId] = useState()
+const UpdateCard = ({selectedcollection, open,onClose, cards, id, setId}) => {
     const [updatedword, setUpdatedWord] = useState('')
     const [updateddefinition, setUpdatedDefinition] = useState('')
 
