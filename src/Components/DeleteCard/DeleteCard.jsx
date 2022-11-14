@@ -3,8 +3,8 @@ import axios from 'axios'
 import './DeleteCard.css'
 
 
-const DeleteCard = ({selectedcollection, cards, cardobj, id}) => {
-
+const DeleteCard = ({selectedcollection, cards, cardobj,}) => {
+    const [id, setId] = useState()
 
 
     async function deleteCard(){
@@ -14,15 +14,16 @@ const DeleteCard = ({selectedcollection, cards, cardobj, id}) => {
         }
     }
 
-    const handleClick = () => {
+    function handleClick(){
         deleteCard();
     }
 
     return (
         <div>
-            <button className="delete" type="Submit" onClick={() => handleClick()}>
-                DELETE CARD
-            </button>
+            <label className="delete" type="Submit" >
+                DELETE CARD <input type="text" placeholder="Enter ID to Delete" value={id} onChange={(event) => setId(event.target.value)}/>
+            </label>
+            <button type="submit" className="button" onClick={handleClick}>DELETE</button>
         </div>
     )
 }

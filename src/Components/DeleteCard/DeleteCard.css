@@ -1,5 +1,11 @@
 .delete {
     position: absolute;
-    left: 50%;
+    left: 42%;
+    bottom: 15%;
+}
+
+.button {
+    position: absolute;
+    left: 57%;
     bottom: 15%;
 }

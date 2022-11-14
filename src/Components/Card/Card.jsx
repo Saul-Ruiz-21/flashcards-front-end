@@ -9,7 +9,8 @@ const Card = ({card}) => {
     return(
         <div className="fluttercard">
             <div className="card">
-                <div className="front"><h3>{card.word}</h3></div>
+                <div className="front"><h3>{card.word}</h3>
+                <p>ID: {card.id}</p></div>
                 <div className="back"><h4>{card.definition}</h4></div>
             </div>
             
